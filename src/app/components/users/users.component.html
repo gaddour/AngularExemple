@@ -1,0 +1,28 @@
+<div class="btn-add-user">
+    <a routerLink="./add" class="btn btn-secondary" role="button">Add User</a>
+</div>
+<router-outlet></router-outlet>
+<table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">Id</th>
+      <th scope="col">FirstName</th>
+      <th scope="col">LastName</th>
+      <th scope="col">PhoneNumber</th>
+      <th scope="col">Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let user of users; let i=index">
+      <th scope="row">{{i+1}}</th>
+      <td>{{user.firstName}}</td>
+      <td>{{user.lastName}}</td>
+      <td>{{user.phoneNumber}}</td>
+      <td><a [routerLink]="['./edit',user.id]">edit</a></td>
+    </tr>
+  </tbody>
+</table>
+
+
+
+

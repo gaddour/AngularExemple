@@ -1,0 +1,69 @@
+h1{
+    color: beige;
+}
+
+P{    
+    text-align: justify;
+    word-break: break-word;
+}
+.navbar, .footer{
+    height: 60px;
+    background-color: #f8f8f8;
+    border-color: #f8f8f8;
+    box-shadow: 0 1px 12px 0 rgba(119, 151, 178, 0.25);
+}
+.footer{
+    box-shadow:  0 8px 12px 12px rgba(119, 151, 178, 0.25)
+}
+/*nav*/
+a:hover{
+    text-decoration: none;
+}
+ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+.side-nav{
+    height: calc( 100vh - 120px);
+    background-color: #e9ecef;
+}
+.side-nav li.active{
+    color:white;
+    background-color: #337ab7;
+}
+.side-nav li.active a{
+    color:white !important;
+}
+.side-nav li{
+    padding: 16px 0 ;
+}
+.side-nav li a.active{
+    color:white !important;
+}
+.side-nav li a{
+    color: #337ab7 !important;
+    font-weight: 500;
+    padding: 16px 10px;
+}
+
+.btn-add-user{
+    display: flex;
+    justify-content: flex-end;
+    margin: 3rem 18px 3rem 0;
+}
+
+.msg-invalid{
+    padding: .5rem 0;
+    color: #b92d39;
+    font-weight: 500;
+}
+button:disabled{
+    cursor: not-allowed;
+}
+
+.footer > p{
+    text-align: center;
+    padding-top:1rem;
+    font-weight: 500;
+ }

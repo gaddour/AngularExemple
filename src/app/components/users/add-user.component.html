@@ -1,0 +1,27 @@
+
+<form [formGroup]="userForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+        <label>First Name</label>
+        <input type="text" formControlName="firstName" class="form-control"  value="firstName.value"/>
+        <div *ngIf="userForm.controls.firstName.errors && userForm.controls.firstName.dirty">
+            <p class="msg-invalid" *ngIf="userForm.controls.firstName.errors.required">First Name is required</p>
+        </div>
+    </div>
+    <div class="form-group">
+        <label>Last Name</label>
+        <input type="text" formControlName="lastName" class="form-control" value="lastName.value" />
+        <div *ngIf="userForm.controls.lastName.errors && userForm.controls.lastName.dirty">
+            <p class="msg-invalid" *ngIf="userForm.controls.lastName.errors.required">Last Name is required</p>
+        </div>
+    </div>
+    <div class="form-group">
+        <label>Phone Number</label>
+        <input type="text" formControlName="phoneNumber" class="form-control" value="phoneNumber.value"/>
+        <div *ngIf="userForm.controls.phoneNumber.errors   && userForm.controls.phoneNumber.dirty">
+            <p  class="msg-invalid"  *ngIf="userForm.controls.phoneNumber.errors.required">Phone Number is required</p>
+            <p  class="msg-invalid"  *ngIf="userForm.controls.phoneNumber.errors.pattern">Phone Number must be numeric</p>
+            <p class="msg-invalid" *ngIf="userForm.controls.phoneNumber.errors.maxlength">Phone Number must be 8 number long </p>
+        </div>
+    </div>
+    <button [disabled]="!userForm.valid"  type="submit" class="btn btn-primary">Submit</button>
+</form>
